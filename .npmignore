@@ -1,3 +1,5 @@
 .prettierrc
 *.test.js
 fixtures
+.DS_Store
+.eslintrc
