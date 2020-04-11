@@ -1,5 +1,4 @@
 const fs = require("fs");
-const util = require("util");
 const template = require("@babel/template").default;
 const generate = require("@babel/generator").default;
 const t = require("@babel/types");
@@ -48,8 +47,8 @@ function jsonToAst(data) {
   }
 }
 
-async function parseProject(filepath) {
-  const jsonStr = await util.promisify(fs.readFile)(filepath, "utf-8");
+function parseProject(filepath) {
+  const jsonStr = fs.readFileSync(filepath, "utf-8");
   const project = JSON.parse(jsonStr);
 
   if (Array.isArray(project.entities)) {

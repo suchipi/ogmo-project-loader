@@ -1,7 +1,7 @@
 const parseOgmo = require("./parseOgmo");
 
-test("parseOgmo", async () => {
-  expect(await parseOgmo("fixtures/game.ogmo")).toMatchInlineSnapshot(`
+test("parseOgmo", () => {
+  expect(parseOgmo("fixtures/game.ogmo")).toMatchInlineSnapshot(`
     "module.exports = {
       \\"name\\": \\"game\\",
       \\"ogmoVersion\\": \\"3.3.0\\",
